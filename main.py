@@ -18,6 +18,7 @@ class NoTi():
         self.master = master
         self.Windows = None
         self.Programm_Name = "Noti"
+        self.Version = 0
         self.Benutzerordner = os.path.expanduser('~')
         self.Pfad_DB_ordner = os.path.join(self.Benutzerordner, "Hefte")
         self.Pfad_DB = os.path.join(self.Pfad_DB_ordner, "Eintrag.txt")
@@ -39,12 +40,12 @@ class NoTi():
         if self.erster_start == True:
             print("bereite ein paar Sachen zum ersten Start vor...")
             try:
-                os.mkdir(self.Pfad_DB)
+                os.mkdir(self.Pfad_DB_ordner)
+                print(f"Pfad {self.Pfad_DB_ordner} erstellt.")
             except PermissionError:
                 messagebox.showerror(title=self.Programm_Name, message=f"Fehler beim schreiben im Benutzerordner, stellen Sie sicher dass Zugriff darauf besteht.")
             except Exception as e1:
                 print(f"Fehler beim erstellen der Programmordner: {e1}")
-        
 
 
     def GUI_init(self):

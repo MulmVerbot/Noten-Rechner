@@ -1,2 +1,3 @@
 # Noten-Rechner
- Ein Programm in welchen ich meine Noten aufschreiben kann
+ Ein Programm in das ich meine Noten schreiben kann
+ 
